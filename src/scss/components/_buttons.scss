@@ -1,0 +1,81 @@
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+.btn {
+  font-size: $buttonSize;
+  letter-spacing: $lsXL;
+  border: 0;
+  padding: 16px 42px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: $primary;
+  background-color: $white;
+  @include generate-transition(all, 500ms, ease);
+  &:hover {
+    color: $white;
+    background-color: $primary;
+  }
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  color: $white;
+  background-color: $primary;
+  @include generate-transition(all, 500ms, ease);
+}
+
+.btn-dark {
+  background-color: $primary;
+  color: $white;
+  border: 1px solid $primary;
+  &:hover {
+    background-color: transparent;
+    color: $primary;
+  }
+}
+
+.contact-btn-icon {
+  left: 48px;
+  .contact-btn {
+    padding: $bodyXXS 32px $bodyXXS 22px;
+    h5 {
+      font-size: $bodyS;
+      letter-spacing: 0.4px;
+    }
+  }
+}
+
+.comment-btn-icon {
+  right: 48px;
+  bottom: 20px;
+}
+
+.btn-with-icon {
+  &:hover .btn-icon {
+    margin-left: $bodyXXS;
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+    }
+  }
+  .contact-content {
+    span {
+      font-weight: 600;
+      font-family: "Muli";
+      font-size: $bodyS;
+      letter-spacing: 1.26px;
+      margin-right: $bodyXXS;
+    }
+  }
+}

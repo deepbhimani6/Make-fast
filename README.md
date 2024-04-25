@@ -1,1 +1,3 @@
-# Make-fast
+# After Clone
+
+Use commend "npm i"

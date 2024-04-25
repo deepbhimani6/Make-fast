@@ -1,0 +1,355 @@
+@import "variables";
+
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Red Hat Display";
+}
+
+.font-red-hat {
+  font-family: "Red Hat Display";
+}
+
+.font-prata {
+  font-family: "prata";
+}
+
+.font-lato {
+  font-family: "Lato";
+}
+
+.font-muli {
+  font-family: "Muli";
+}
+
+.container,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  @include media-breakpoint-up(xxl) {
+    max-width: 1352px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 0 36px;
+  }
+}
+
+.mx--36 {
+  @include media-breakpoint-down(sm) {
+    margin-left: -36px;
+    margin-right: -36px;
+  }
+}
+
+.px--36 {
+  @include media-breakpoint-down(sm) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+.full-lg-down {
+  @include media-breakpoint-down(lg) {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+}
+.full-md-down {
+  @include media-breakpoint-down(md) {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+}
+.full-sm-down {
+  @include media-breakpoint-down(sm) {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Prata";
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  outline: none !important;
+}
+
+a,
+input,
+button {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.no-gutter > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.align--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@for $i from 1 through 20 {
+  .height--#{$i*5} {
+    height: #{5 * $i}vh;
+  }
+}
+
+@for $i from 1 through 40 {
+  .padding-top--#{$i*5}px {
+    padding-top: #{5 * $i}px;
+  }
+}
+
+/*------- Font Size Classes -------*/
+
+.headingL {
+  font-size: $headingL;
+}
+
+.headingM {
+  font-size: $headingM;
+}
+
+.headingS {
+  font-size: $headingS;
+}
+
+.headingXS {
+  font-size: $headingXS;
+}
+
+.bodyL {
+  font-size: $bodyL;
+}
+
+.bodyM {
+  font-size: $bodyM;
+}
+
+.bodyS {
+  font-size: $bodyS;
+}
+
+.bodyXS {
+  font-size: $bodyXS;
+}
+
+.tagline {
+  font-size: $taglineSize;
+  text-transform: uppercase;
+  letter-spacing: 2.1px;
+}
+
+/*------- Colour Classes -------*/
+.color--black {
+  color: $primary;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $primary;
+  }
+}
+
+.color--white {
+  color: $white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+  }
+}
+
+/*------- Miscellaneous Classes -------*/
+
+.wide--wrap {
+  max-width: 1300px;
+  margin: auto;
+  width: 90%;
+}
+
+.full--opacity {
+  opacity: 100%;
+}
+
+.half--opacity {
+  opacity: 0.5;
+}
+
+.w1-by3 {
+  width: 33.33%;
+}
+
+.absolute--center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.default--button {
+  display: inline-block;
+  position: relative;
+  color: $white;
+  font-weight: 500;
+  padding: 15px 25px;
+  min-width: 130px;
+  border: none;
+  background: $primary;
+  text-align: center;
+  font-size: $buttonSize;
+  appearance: none;
+  -webkit-appearance: none;
+  @include generate-transition(all, 500ms, ease);
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.underline--link {
+  display: inline-block;
+  border-bottom: 1px solid;
+}
+
+// default css
+li {
+  list-style: none;
+}
+
+.object-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+.slick-overflow .slick-list {
+  overflow: visible;
+}
+
+.large-title {
+  font-size: $headingXXL;
+  letter-spacing: 0.66px;
+  line-height: 72px;
+  &.title-big {
+    font-size: $headingXL;
+    line-height: 84px;
+    @include media-breakpoint-down(sm) {
+      font-size: 44px;
+      line-height: 54px;
+      letter-spacing: 0.44px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 52px;
+    letter-spacing: 0.54px;
+    line-height: 65px;
+  }
+}
+
+.font-content-theme {
+  font-size: $bodyM;
+  letter-spacing: 0.64px;
+  line-height: $headingS;
+  color: $primary;
+  @include media-breakpoint-down(sm) {
+    font-size: $bodyS;
+    letter-spacing: 0.42px;
+    line-height: 25px;
+  }
+}
+
+.section-large-title {
+  font-size: $headingM;
+  line-height: 46px;
+  color: $primary;
+  &.section-larger-title {
+    font-size: $headingL;
+    line-height: 56px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 30px !important;
+    line-height: 40px !important;
+  }
+}
+
+.section-small-title {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.small-title {
+  font-family: "Red Hat Display";
+  font-size: $bodyXS;
+  letter-spacing: $lsXL;
+  line-height: $bodyM;
+  color: $gray;
+}
+
+.news-text {
+  font-family: "Prata";
+  font-size: 22px;
+  color: $primary;
+  line-height: 30px;
+}
+
+.form-check {
+  cursor: pointer;
+  input {
+    cursor: pointer;
+  }
+  label {
+    cursor: pointer;
+  }
+}
+
+::placeholder {
+  text-transform: uppercase;
+  font-size: $bodyXS;
+  letter-spacing: 1.08px;
+  line-height: $bodyM;
+  color: $primary;
+  font-weight: 500;
+}
+
+.placeholder-white {
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.offcanvas-backdrop.show {
+  opacity: 0.28;
+}
+
+.fixed-bg {
+  overflow: hidden;
+}
+
+.scroll-xy-none::-webkit-scrollbar {
+  display: none;
+}

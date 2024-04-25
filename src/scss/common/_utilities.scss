@@ -1,0 +1,108 @@
+.small-label {
+  font-size: $bodyXS;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.text-s {
+  font-size: $bodyS;
+}
+.text-xs {
+  font-size: $bodyXS;
+}
+.text-sm {
+  font-size: $bodyS;
+}
+.text-base {
+  font-size: $bodyM;
+}
+.text-lg {
+  font-size: $bodyL;
+}
+.font-8 {
+  font-size: 8px;
+}
+
+.text-title {
+  font-size: 30px;
+  line-height: 40px;
+  @include media-breakpoint-up(lg) {
+    font-size: 34px;
+    line-height: 46px;
+  }
+}
+
+.form-check-label {
+  font-size: $bodyS;
+  letter-spacing: 0.56px;
+}
+
+.text-gray-imp {
+  color: $gray !important;
+}
+
+.text-gray {
+  color: $gray;
+  opacity: 0.5;
+}
+
+.tracking-wide {
+  letter-spacing: 0.1em;
+}
+
+.bg-gray {
+  background-color: $gray;
+}
+
+.bg-light-gray {
+  background-color: $light-gray !important;
+}
+
+.bg-lighter-gray {
+  background-color: $lighter-grey;
+}
+
+.border-gray-top {
+  border-top: 1px solid rgba(112, 112, 112, 0.5);
+}
+.border-gray-bottom {
+  border-bottom: 1px solid rgba(112, 112, 112, 0.5);
+}
+
+.bg-green {
+  background-color: $green;
+}
+.text-green {
+  color: $green;
+}
+
+.transition {
+  @include generate-transition(all, 0.4s, ease-in-out);
+}
+
+.bg-primary-hover {
+  background-color: $primary;
+
+  &:hover {
+    background-color: $secondary;
+  }
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.z-index-9 {
+  z-index: 9;
+}
+.z-index-10 {
+  z-index: 10;
+}
+
+.leading-relax {
+  line-height: 2;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

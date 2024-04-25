@@ -1,0 +1,112 @@
+footer {
+  .small-title {
+    font-weight: 500;
+  }
+  .border-top {
+    padding: 70px 0 24px;
+    @include media-breakpoint-down(md) {
+      padding: 52px 0 64px;
+      border-top: 2px solid rgba(112, 112, 112, 0.1) !important;
+    }
+  }
+  .footer-large-title {
+    font-size: 32px;
+    line-height: 44px;
+    @include media-breakpoint-down(sm) {
+      font-size: 35px;
+      letter-spacing: 0.17px;
+      line-height: 48px;
+    }
+  }
+  .subscribe-form {
+    h4 {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    h5 {
+      font-family: "Red Hat Display";
+      font-size: $bodyS;
+      letter-spacing: 0.56px;
+      font-weight: 400;
+      color: #828282;
+    }
+    input.text-input {
+      font-size: $bodyXS;
+      letter-spacing: 1.08px;
+      padding-right: 55px;
+      font-weight: 500;
+    }
+  }
+  .social-icon {
+    a {
+      @include generate-transition(all, 0.3s, ease);
+      &:hover {
+        padding-bottom: 20px;
+      }
+    }
+  }
+  div {
+    ul {
+      margin-bottom: 22px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 38px;
+      }
+      li {
+        margin-right: $headingM;
+        line-height: 1;
+        a {
+          @include generate-transition(all, 0.3s, ease);
+        }
+        @include media-breakpoint-down(xl) {
+          margin-right: 20px;
+        }
+        @include media-breakpoint-down(md) {
+          margin-right: 7px;
+        }
+        @include media-breakpoint-down(sm) {
+          margin-right: 0;
+          width: 50%;
+          a {
+            font-family: "Lato" !important;
+            color: #0f0f0f !important;
+            opacity: 0.3;
+            font-weight: 700 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-footer {
+  .border-top {
+    padding-top: 110px;
+    @include media-breakpoint-up(sm) {
+      border-top: 0 !important;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 52px 0 42px;
+    }
+  }
+}
+
+.careers-footer {
+  .border-top {
+    padding-top: 100px;
+    @include media-breakpoint-up(sm) {
+      border-top: 0;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 52px 0 46px;
+    }
+  }
+}
+
+.brochures-footer {
+  .border-top {
+    padding-top: 84px;
+    @include media-breakpoint-down(md) {
+      padding-top: 52px;
+    }
+  }
+}

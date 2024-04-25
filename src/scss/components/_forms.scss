@@ -1,0 +1,154 @@
+.FAQs-header {
+  form {
+    input {
+      letter-spacing: 1.26px;
+      &::placeholder {
+        font-size: $bodyS !important;
+        line-height: $bodyL !important;
+        letter-spacing: 1.26px !important;
+        font-weight: 600;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: $bodyXS;
+        line-height: $menuSize;
+        letter-spacing: 1.08px;
+        font-weight: 700 !important;
+        &::placeholder {
+          font-size: $bodyXS !important;
+          line-height: $menuSize !important;
+          letter-spacing: 1.08px !important;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.poratal-form-details {
+  padding-bottom: 104px;
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 234px;
+  }
+}
+.poratal-form-header {
+  @include media-breakpoint-down(sm) {
+    p {
+      font-size: $bodyM;
+      letter-spacing: 0.48px;
+      line-height: 28px;
+      -webkit-line-clamp: 3;
+    }
+  }
+}
+
+//  select2
+
+.select2-border-none {
+  .select2-selection--single {
+    border: 0;
+  }
+}
+
+.select2-dropdown {
+  padding: 0 16px;
+  border-radius: 3px;
+  z-index: 9 !important;
+  border: 0;
+  .select2-results__options {
+    padding-top: 24px;
+    border-top: 1px solid rgba(112, 112, 112, 0.11);
+    max-height: 100% !important;
+    li {
+      background-color: transparent !important;
+      color: $primary !important;
+      padding: 0 0 28px;
+      line-height: 1;
+    }
+  }
+}
+
+.form-modal {
+  .modal-body {
+    form {
+      .select2-selection {
+        text-align: left;
+        background-color: #34494d;
+        span {
+          padding: 15px 16px;
+          font-size: $bodyXS;
+          letter-spacing: 1.08px;
+          color: $white;
+          @include media-breakpoint-down(sm) {
+            padding: 18px 16px;
+          }
+        }
+      }
+    }
+  }
+  .select2-dropdown {
+    border: 0;
+  }
+}
+
+.select2-container {
+  .select2-selection--single {
+    height: auto;
+    border-color: $primary !important;
+    .select2-selection__rendered {
+      line-height: $bodyM;
+      padding: $bodyM $bodyM $bodyM 24px;
+      font-size: $bodyXS !important;
+      letter-spacing: $lsXL !important;
+      font-weight: 600;
+      color: $primary;
+    }
+    .select2-selection__arrow {
+      height: auto;
+      top: 50%;
+      padding: 0 !important;
+      b {
+        border-color: $white transparent !important;
+        left: 0;
+      }
+    }
+  }
+}
+
+.product-dropdown {
+  .select2-selection--single {
+    .select2-selection__arrow {
+      b {
+        border-color: $primary transparent !important;
+      }
+    }
+  }
+  .select2-container {
+    .select2-dropdown {
+      border-top: 0;
+      border: 1px solid #aaa;
+    }
+  }
+}
+
+.select2-container--open {
+  .select2-selection {
+    background-color: $white !important;
+    .select2-selection__rendered {
+      color: $primary !important;
+    }
+    .select2-selection__arrow {
+      b {
+        border-color: $primary transparent !important;
+      }
+    }
+  }
+  .select2-results__option {
+    color: $primary;
+    text-align: left;
+    font-size: $bodyXS;
+    letter-spacing: 1.8px;
+    line-height: $headingS;
+    font-weight: 500;
+    padding: 6px $bodyM;
+  }
+}
